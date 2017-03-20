@@ -45,7 +45,7 @@
             this.memeSjekk = new System.Windows.Forms.Panel();
             this.ferdigBilde = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            //this.lydSpiller = new AxWMPLib.AxWindowsMediaPlayer();
+            this.lydSpiller = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.meme1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meme3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meme2)).BeginInit();
@@ -54,7 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bilde4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bilde2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ferdigBilde)).BeginInit();
-//            ((System.ComponentModel.ISupportInitialize)(this.lydSpiller)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lydSpiller)).BeginInit();
             this.SuspendLayout();
             // 
             // meme1
@@ -183,11 +183,12 @@
             // 
             this.ferdigBilde.BackColor = System.Drawing.SystemColors.Control;
             this.ferdigBilde.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ferdigBilde.Location = new System.Drawing.Point(261, 103);
+            this.ferdigBilde.Location = new System.Drawing.Point(279, 103);
             this.ferdigBilde.Name = "ferdigBilde";
             this.ferdigBilde.Size = new System.Drawing.Size(656, 416);
             this.ferdigBilde.TabIndex = 18;
             this.ferdigBilde.TabStop = false;
+            this.ferdigBilde.Click += new System.EventHandler(this.ferdigBilde_Click);
             // 
             // contextMenuStrip1
             // 
@@ -196,19 +197,19 @@
             // 
             // lydSpiller
             // 
-            /*this.lydSpiller.Enabled = true;
-            this.lydSpiller.Location = new System.Drawing.Point(886, 12);
+            this.lydSpiller.Enabled = true;
+            this.lydSpiller.Location = new System.Drawing.Point(1230, 60);
             this.lydSpiller.Name = "lydSpiller";
             this.lydSpiller.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("lydSpiller.OcxState")));
             this.lydSpiller.Size = new System.Drawing.Size(75, 23);
-            this.lydSpiller.TabIndex = 19;*/
+            this.lydSpiller.TabIndex = 19;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1518, 873);
-//            this.Controls.Add(this.lydSpiller);
+            this.Controls.Add(this.lydSpiller);
             this.Controls.Add(this.ferdigBilde);
             this.Controls.Add(this.memeSjekk);
             this.Controls.Add(this.lbTitle);
@@ -235,7 +236,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bilde4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bilde2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ferdigBilde)).EndInit();
-//            ((System.ComponentModel.ISupportInitialize)(this.lydSpiller)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lydSpiller)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,7 +259,7 @@
         private System.Windows.Forms.Panel memeSjekk;
         private System.Windows.Forms.PictureBox ferdigBilde;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-  //      private AxWMPLib.AxWindowsMediaPlayer lydSpiller;
+        private AxWMPLib.AxWindowsMediaPlayer lydSpiller;
     }
 }
 

@@ -95,5 +95,10 @@ namespace LæreGreier
                 bilde4.Image = null;
             }
         }
+
+        private void ferdigBilde_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

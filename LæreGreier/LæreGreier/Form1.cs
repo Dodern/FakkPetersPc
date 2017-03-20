@@ -18,9 +18,9 @@ namespace LæreGreier
         }
 
         public static int poeng = 0;
-        ferdigboks form2 = new ferdigboks();
+      //  ferdigboks form2 = new ferdigboks();
 
-        private void Spill_Ferdig()
+     /*   private void Spill_Ferdig()
         {
             if (poeng == 5)
             {
@@ -35,7 +35,7 @@ namespace LæreGreier
                 form2.Show();
             }
         }
-
+        */
         private void Form1_Load(object sender, EventArgs e)
         {
 

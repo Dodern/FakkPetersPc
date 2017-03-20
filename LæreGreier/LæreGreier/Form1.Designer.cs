@@ -200,7 +200,8 @@
             // 
             this.ferdigBilde.BackColor = System.Drawing.SystemColors.Control;
             this.ferdigBilde.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ferdigBilde.Location = new System.Drawing.Point(694, 224);
+
+            this.ferdigBilde.Location = new System.Drawing.Point(303, 103);
             this.ferdigBilde.Name = "ferdigBilde";
             this.ferdigBilde.Size = new System.Drawing.Size(363, 256);
             this.ferdigBilde.TabIndex = 18;

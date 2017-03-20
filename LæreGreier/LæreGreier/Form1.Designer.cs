@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.meme1 = new System.Windows.Forms.PictureBox();
             this.meme3 = new System.Windows.Forms.PictureBox();
             this.meme2 = new System.Windows.Forms.PictureBox();
@@ -45,7 +44,6 @@
             this.memeSjekk = new System.Windows.Forms.Panel();
             this.ferdigBilde = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            //this.lydSpiller = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.meme1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meme3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meme2)).BeginInit();
@@ -54,7 +52,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bilde4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bilde2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ferdigBilde)).BeginInit();
-//            ((System.ComponentModel.ISupportInitialize)(this.lydSpiller)).BeginInit();
             this.SuspendLayout();
             // 
             // meme1
@@ -129,6 +126,7 @@
             this.btnSjekk.TabIndex = 11;
             this.btnSjekk.Text = "Sjekk Svar";
             this.btnSjekk.UseVisualStyleBackColor = true;
+            this.btnSjekk.Click += new System.EventHandler(this.btnSjekk_Click_1);
             // 
             // btnNeste
             // 
@@ -146,7 +144,7 @@
             this.lbPoeng.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPoeng.Location = new System.Drawing.Point(1062, 60);
             this.lbPoeng.Name = "lbPoeng";
-            this.lbPoeng.Size = new System.Drawing.Size(46, 15);
+            this.lbPoeng.Size = new System.Drawing.Size(72, 24);
             this.lbPoeng.TabIndex = 14;
             this.lbPoeng.Text = "Poeng : ";
             // 
@@ -156,7 +154,7 @@
             this.lbRegler.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRegler.Location = new System.Drawing.Point(540, 809);
             this.lbRegler.Name = "lbRegler";
-            this.lbRegler.Size = new System.Drawing.Size(601, 15);
+            this.lbRegler.Size = new System.Drawing.Size(955, 24);
             this.lbRegler.TabIndex = 15;
             this.lbRegler.Text = "Velg bildet til høyre du mener passer innn i memeserien til venstre. Dra bildet o" +
     "ver i det tomme feltet på venstre side.";
@@ -167,7 +165,7 @@
             this.lbTitle.Font = new System.Drawing.Font("Comic Sans MS", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.Location = new System.Drawing.Point(446, 10);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(386, 90);
+            this.lbTitle.Size = new System.Drawing.Size(580, 135);
             this.lbTitle.TabIndex = 16;
             this.lbTitle.Text = "Meme Quiz";
             // 
@@ -191,24 +189,15 @@
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // lydSpiller
-            // 
-            /*this.lydSpiller.Enabled = true;
-            this.lydSpiller.Location = new System.Drawing.Point(886, 12);
-            this.lydSpiller.Name = "lydSpiller";
-            this.lydSpiller.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("lydSpiller.OcxState")));
-            this.lydSpiller.Size = new System.Drawing.Size(75, 23);
-            this.lydSpiller.TabIndex = 19;*/
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1518, 873);
-//            this.Controls.Add(this.lydSpiller);
             this.Controls.Add(this.ferdigBilde);
             this.Controls.Add(this.memeSjekk);
             this.Controls.Add(this.lbTitle);
@@ -235,7 +224,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bilde4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bilde2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ferdigBilde)).EndInit();
-//            ((System.ComponentModel.ISupportInitialize)(this.lydSpiller)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

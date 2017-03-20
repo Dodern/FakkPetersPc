@@ -95,5 +95,10 @@ namespace LæreGreier
                 bilde4.Image = null;
             }
         }
+
+        private void btnSjekk_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

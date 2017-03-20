@@ -15,6 +15,7 @@ namespace LæreGreier
         public Form1()
         {
             InitializeComponent();
+
         }
 
         public static int poeng = 0;
@@ -82,7 +83,6 @@ namespace LæreGreier
             if (img == null) return;
             if (DoDragDrop(img, DragDropEffects.Move) == DragDropEffects.Move)
             {
-                bilde3.Image = null;
             }
         }
 
@@ -92,7 +92,6 @@ namespace LæreGreier
             if (img == null) return;
             if (DoDragDrop(img, DragDropEffects.Move) == DragDropEffects.Move)
             {
-                bilde4.Image = null;
             }
         }
         

@@ -15,6 +15,7 @@ namespace LæreGreier
         public Form1()
         {
             InitializeComponent();
+
             this.TopMost = true;
             this.WindowState = FormWindowState.Maximized;
         }
@@ -84,7 +85,6 @@ namespace LæreGreier
             if (img == null) return;
             if (DoDragDrop(img, DragDropEffects.Move) == DragDropEffects.Move)
             {
-                bilde3.Image = null;
             }
         }
 
@@ -94,7 +94,6 @@ namespace LæreGreier
             if (img == null) return;
             if (DoDragDrop(img, DragDropEffects.Move) == DragDropEffects.Move)
             {
-                bilde4.Image = null;
             }
         }
         

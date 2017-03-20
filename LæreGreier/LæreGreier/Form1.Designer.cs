@@ -87,38 +87,50 @@
             // bilde1
             // 
             this.bilde1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.bilde1.Image = global::LæreGreier.Properties.Resources.Bock;
             this.bilde1.Location = new System.Drawing.Point(502, 178);
             this.bilde1.Name = "bilde1";
             this.bilde1.Size = new System.Drawing.Size(293, 182);
+            this.bilde1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bilde1.TabIndex = 7;
             this.bilde1.TabStop = false;
+            this.bilde1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseDown);
             // 
             // bilde3
             // 
             this.bilde3.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.bilde3.Image = global::LæreGreier.Properties.Resources.Crying_Obama;
             this.bilde3.Location = new System.Drawing.Point(502, 412);
             this.bilde3.Name = "bilde3";
             this.bilde3.Size = new System.Drawing.Size(293, 182);
+            this.bilde3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bilde3.TabIndex = 8;
             this.bilde3.TabStop = false;
+            this.bilde3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bilde3_MouseDown);
             // 
             // bilde4
             // 
             this.bilde4.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.bilde4.Image = global::LæreGreier.Properties.Resources.Trump_mlg;
             this.bilde4.Location = new System.Drawing.Point(849, 412);
             this.bilde4.Name = "bilde4";
             this.bilde4.Size = new System.Drawing.Size(293, 182);
+            this.bilde4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bilde4.TabIndex = 9;
             this.bilde4.TabStop = false;
+            this.bilde4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bilde4_MouseDown);
             // 
             // bilde2
             // 
             this.bilde2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.bilde2.Image = global::LæreGreier.Properties.Resources.Meksikanere;
             this.bilde2.Location = new System.Drawing.Point(849, 178);
             this.bilde2.Name = "bilde2";
             this.bilde2.Size = new System.Drawing.Size(293, 182);
+            this.bilde2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bilde2.TabIndex = 10;
             this.bilde2.TabStop = false;
+            this.bilde2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bilde2_MouseDown);
             // 
             // btnSjekk
             // 
@@ -147,7 +159,7 @@
             this.lbPoeng.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPoeng.Location = new System.Drawing.Point(1062, 60);
             this.lbPoeng.Name = "lbPoeng";
-            this.lbPoeng.Size = new System.Drawing.Size(72, 24);
+            this.lbPoeng.Size = new System.Drawing.Size(46, 15);
             this.lbPoeng.TabIndex = 14;
             this.lbPoeng.Text = "Poeng : ";
             // 
@@ -157,7 +169,7 @@
             this.lbRegler.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRegler.Location = new System.Drawing.Point(540, 809);
             this.lbRegler.Name = "lbRegler";
-            this.lbRegler.Size = new System.Drawing.Size(955, 24);
+            this.lbRegler.Size = new System.Drawing.Size(601, 15);
             this.lbRegler.TabIndex = 15;
             this.lbRegler.Text = "Velg bildet til høyre du mener passer innn i memeserien til venstre. Dra bildet o" +
     "ver i det tomme feltet på venstre side.";
@@ -168,25 +180,30 @@
             this.lbTitle.Font = new System.Drawing.Font("Comic Sans MS", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.Location = new System.Drawing.Point(446, 10);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(580, 135);
+            this.lbTitle.Size = new System.Drawing.Size(386, 90);
             this.lbTitle.TabIndex = 16;
             this.lbTitle.Text = "Meme Quiz";
             // 
             // memeSjekk
             // 
+            this.memeSjekk.AllowDrop = true;
             this.memeSjekk.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.memeSjekk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.memeSjekk.Location = new System.Drawing.Point(30, 668);
             this.memeSjekk.Name = "memeSjekk";
             this.memeSjekk.Size = new System.Drawing.Size(350, 179);
             this.memeSjekk.TabIndex = 17;
+            this.memeSjekk.DragDrop += new System.Windows.Forms.DragEventHandler(this.memeSjekk_DragDrop);
+            this.memeSjekk.DragEnter += new System.Windows.Forms.DragEventHandler(this.memeSjekk_DragEnter);
             // 
             // ferdigBilde
             // 
             this.ferdigBilde.BackColor = System.Drawing.SystemColors.Control;
             this.ferdigBilde.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+
             this.ferdigBilde.Location = new System.Drawing.Point(303, 103);
             this.ferdigBilde.Name = "ferdigBilde";
-            this.ferdigBilde.Size = new System.Drawing.Size(656, 416);
+            this.ferdigBilde.Size = new System.Drawing.Size(363, 256);
             this.ferdigBilde.TabIndex = 18;
             this.ferdigBilde.TabStop = false;
             this.ferdigBilde.Click += new System.EventHandler(this.ferdigBilde_Click);
@@ -208,7 +225,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1518, 873);
             this.Controls.Add(this.lydSpiller);

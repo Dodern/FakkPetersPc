@@ -118,7 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-<<<<<<< HEAD
   <data name="braDatBoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\braDatBoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -127,7 +126,6 @@
   </data>
   <data name="okDatBoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\okDatBoi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-=======
   <data name="Crying-Obama" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Crying-Obama.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,6 +137,5 @@
   </data>
   <data name="Bock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
->>>>>>> origin/master
   </data>
 </root>

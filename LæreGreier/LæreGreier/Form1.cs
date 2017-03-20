@@ -15,12 +15,15 @@ namespace LæreGreier
         public Form1()
         {
             InitializeComponent();
+
+            this.TopMost = true;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         public static int poeng = 0;
-        ferdigboks form2 = new ferdigboks();
+      ferdigboks form2 = new ferdigboks();
 
-        private void Spill_Ferdig()
+       private void Spill_Ferdig()
         {
             if (poeng == 5)
             {
@@ -35,7 +38,7 @@ namespace LæreGreier
                 form2.Show();
             }
         }
-
+        
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -82,7 +85,6 @@ namespace LæreGreier
             if (img == null) return;
             if (DoDragDrop(img, DragDropEffects.Move) == DragDropEffects.Move)
             {
-                bilde3.Image = null;
             }
         }
 
@@ -92,13 +94,12 @@ namespace LæreGreier
             if (img == null) return;
             if (DoDragDrop(img, DragDropEffects.Move) == DragDropEffects.Move)
             {
-                bilde4.Image = null;
             }
         }
         
         private void btnSjekk_Click_1(object sender, EventArgs e)
         {
-
+            Spill_Ferdig(); 
         }
 
         private void ferdigBilde_Click(object sender, EventArgs e)

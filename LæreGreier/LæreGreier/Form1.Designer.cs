@@ -94,7 +94,9 @@
             this.bilde1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bilde1.TabIndex = 7;
             this.bilde1.TabStop = false;
-            this.bilde1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseDown);
+            this.bilde1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseDown_1);
+            this.bilde1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseMove);
+            this.bilde1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseUp);
             // 
             // bilde3
             // 
@@ -106,8 +108,9 @@
             this.bilde3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bilde3.TabIndex = 8;
             this.bilde3.TabStop = false;
-            this.bilde3.DragOver += new System.Windows.Forms.DragEventHandler(this.bilde3_DragOver);
-            this.bilde3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bilde3_MouseDown);
+            this.bilde3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseDown_1);
+            this.bilde3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseMove);
+            this.bilde3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseUp);
             // 
             // bilde4
             // 
@@ -119,7 +122,9 @@
             this.bilde4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bilde4.TabIndex = 9;
             this.bilde4.TabStop = false;
-            this.bilde4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bilde4_MouseDown);
+            this.bilde4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseDown_1);
+            this.bilde4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseMove);
+            this.bilde4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseUp);
             // 
             // bilde2
             // 
@@ -131,7 +136,9 @@
             this.bilde2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bilde2.TabIndex = 10;
             this.bilde2.TabStop = false;
-            this.bilde2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bilde2_MouseDown);
+            this.bilde2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseDown_1);
+            this.bilde2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseMove);
+            this.bilde2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseUp);
             // 
             // btnSjekk
             // 
@@ -188,14 +195,13 @@
             // memeSjekk
             // 
             this.memeSjekk.AllowDrop = true;
-            this.memeSjekk.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.memeSjekk.BackColor = System.Drawing.Color.Transparent;
             this.memeSjekk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.memeSjekk.Location = new System.Drawing.Point(30, 668);
+            this.memeSjekk.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.memeSjekk.Location = new System.Drawing.Point(30, 653);
             this.memeSjekk.Name = "memeSjekk";
-            this.memeSjekk.Size = new System.Drawing.Size(350, 179);
+            this.memeSjekk.Size = new System.Drawing.Size(435, 215);
             this.memeSjekk.TabIndex = 17;
-            this.memeSjekk.DragDrop += new System.Windows.Forms.DragEventHandler(this.memeSjekk_DragDrop);
-            this.memeSjekk.DragEnter += new System.Windows.Forms.DragEventHandler(this.memeSjekk_DragEnter);
             // 
             // ferdigBilde
             // 
@@ -216,10 +222,10 @@
             // lydSpiller
             // 
             this.lydSpiller.Enabled = true;
-            this.lydSpiller.Location = new System.Drawing.Point(1230, 60);
+            this.lydSpiller.Location = new System.Drawing.Point(1230, 50);
             this.lydSpiller.Name = "lydSpiller";
             this.lydSpiller.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("lydSpiller.OcxState")));
-            this.lydSpiller.Size = new System.Drawing.Size(75, 23);
+            this.lydSpiller.Size = new System.Drawing.Size(81, 33);
             this.lydSpiller.TabIndex = 19;
             // 
             // Form1

@@ -20,61 +20,33 @@ namespace LæreGreier
             this.WindowState = FormWindowState.Maximized;
         }
 
-        int forrigeX = 0;
-        int forrigeY = 0;
         public static int poeng = 0;
         ferdigboks form2 = new ferdigboks();
-        
-        private void Form1_Load(object sender, EventArgs e)
+        private Point MouseDownLocation;
+        int startPosX = 0;
+        int startPosY = 0;
+
+        private void bilde1_MouseDown_1(object sender, MouseEventArgs e)
         {
+            PictureBox p = sender as PictureBox;
 
-        }
-
-        private void memeSjekk_DragEnter(object sender, DragEventArgs e)
-        {
-            if (e.Data.GetDataPresent(DataFormats.Bitmap))
-                e.Effect = DragDropEffects.Move;
-        }
-
-        private void memeSjekk_DragDrop(object sender, DragEventArgs e)
-        {
-            e.Data.GetData(DataFormats.FileDrop, false);
-            var bmp = (Bitmap)e.Data.GetData(DataFormats.Bitmap);
-            memeSjekk.BackgroundImage = bmp;
-        }
-
-
-        private void bilde1_MouseDown(object sender, MouseEventArgs e)
-        {
-            var img = bilde1.Image;
-            if (img == null) return;
-            if (DoDragDrop(img, DragDropEffects.Move) == DragDropEffects.Move)
-            { }
-        }
-
-        private void bilde2_MouseDown(object sender, MouseEventArgs e)
-        {
-            var img = bilde2.Image;
-            if (img == null) return;
-            if (DoDragDrop(img, DragDropEffects.Move) == DragDropEffects.Move)
-            { }
-        }
-
-        private void bilde3_MouseDown(object sender, MouseEventArgs e)
-        {
-            var img = bilde3.Image;
-            if (img == null) return;
-            if (DoDragDrop(img, DragDropEffects.Move) == DragDropEffects.Move)
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
+                MouseDownLocation = e.Location;
+                startPosX = p.Left;
+                startPosY = p.Top;
+                p.BringToFront();
             }
         }
 
-        private void bilde4_MouseDown(object sender, MouseEventArgs e)
+        private void bilde1_MouseMove(object sender, MouseEventArgs e)
         {
-            var img = bilde4.Image;
-            if (img == null) return;
-            if (DoDragDrop(img, DragDropEffects.Move) == DragDropEffects.Move)
+            PictureBox p = sender as PictureBox;
+
+            if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
+                p.Left = e.X + p.Left - MouseDownLocation.X;
+                p.Top = e.Y + p.Top - MouseDownLocation.Y;
             }
         }
 
@@ -83,14 +55,16 @@ namespace LæreGreier
             form2.Show();
         }
 
-        /*private void bilde3_DragOver(object sender, DragEventArgs e)
+        private void bilde1_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.X != forrigeX || e.Y != forrigeY)
+            PictureBox p = sender as PictureBox;
+
+            if (memeSjekk.Bounds.Contains(Cursor.Position))
             {
-                bilde3.Location = new Point(e.X, e.Y);
-                forrigeX = e.X;
-                forrigeY = e.Y;
-            }
-        }*/
+                memeSjekk.BackgroundImage = p.Image;
+                p.Left = startPosX;
+                p.Top = startPosY;
+            }          
+        }
     }
 }

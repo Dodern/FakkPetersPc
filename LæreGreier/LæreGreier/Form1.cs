@@ -20,6 +20,8 @@ namespace LæreGreier
             this.WindowState = FormWindowState.Maximized;
         }
 
+        int forrigeX = 0;
+        int forrigeY = 0;
         public static int poeng = 0;
         ferdigboks form2 = new ferdigboks();
         
@@ -80,5 +82,15 @@ namespace LæreGreier
         {
             form2.Show();
         }
+
+        /*private void bilde3_DragOver(object sender, DragEventArgs e)
+        {
+            if (e.X != forrigeX || e.Y != forrigeY)
+            {
+                bilde3.Location = new Point(e.X, e.Y);
+                forrigeX = e.X;
+                forrigeY = e.Y;
+            }
+        }*/
     }
 }

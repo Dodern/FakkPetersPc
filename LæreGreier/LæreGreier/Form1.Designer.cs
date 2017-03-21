@@ -106,6 +106,7 @@
             this.bilde3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bilde3.TabIndex = 8;
             this.bilde3.TabStop = false;
+            this.bilde3.DragOver += new System.Windows.Forms.DragEventHandler(this.bilde3_DragOver);
             this.bilde3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bilde3_MouseDown);
             // 
             // bilde4

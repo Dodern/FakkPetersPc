@@ -105,9 +105,6 @@ namespace LæreGreier
         private void ferdigBilde_Click(object sender, EventArgs e)
         {
 
-        }
-
-
-      
+        }     
     }
 }

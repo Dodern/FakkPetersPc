@@ -87,7 +87,7 @@
             // bilde1
             // 
             this.bilde1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            //this.bilde1.Image = global::LæreGreier.Properties.Resources.Bock;
+            this.bilde1.Image = ((System.Drawing.Image)(resources.GetObject("bilde1.Image")));
             this.bilde1.Location = new System.Drawing.Point(502, 178);
             this.bilde1.Name = "bilde1";
             this.bilde1.Size = new System.Drawing.Size(293, 182);
@@ -99,7 +99,7 @@
             // bilde3
             // 
             this.bilde3.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            //this.bilde3.Image = global::LæreGreier.Properties.Resources.Crying_Obama;
+            this.bilde3.Image = ((System.Drawing.Image)(resources.GetObject("bilde3.Image")));
             this.bilde3.Location = new System.Drawing.Point(502, 412);
             this.bilde3.Name = "bilde3";
             this.bilde3.Size = new System.Drawing.Size(293, 182);
@@ -111,7 +111,7 @@
             // bilde4
             // 
             this.bilde4.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            //this.bilde4.Image = global::LæreGreier.Properties.Resources.Trump_mlg;
+            this.bilde4.Image = ((System.Drawing.Image)(resources.GetObject("bilde4.Image")));
             this.bilde4.Location = new System.Drawing.Point(849, 412);
             this.bilde4.Name = "bilde4";
             this.bilde4.Size = new System.Drawing.Size(293, 182);
@@ -123,7 +123,7 @@
             // bilde2
             // 
             this.bilde2.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            //this.bilde2.Image = global::LæreGreier.Properties.Resources.Meksikanere;
+            this.bilde2.Image = ((System.Drawing.Image)(resources.GetObject("bilde2.Image")));
             this.bilde2.Location = new System.Drawing.Point(849, 178);
             this.bilde2.Name = "bilde2";
             this.bilde2.Size = new System.Drawing.Size(293, 182);

@@ -126,16 +126,17 @@
   </data>
   <data name="okDatBoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\okDatBoi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="Crying-Obama" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Crying-Obama.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Trump mlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Trump mlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Meksikanere" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Meksikanere.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Bock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Bock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <data name="Crying-Obama" type="System.Resources.ResXFileRef, System.Windows.Forms">
+      <value>..\Resources\Crying-Obama.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    </data>
+    <data name="Trump mlg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+      <value>..\Resources\Trump mlg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    </data>
+    <data name="Meksikanere" type="System.Resources.ResXFileRef, System.Windows.Forms">
+      <value>..\Resources\Meksikanere.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    </data>
+    <data name="Bock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+      <value>..\Resources\Bock.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    </data>
   </data>
 </root>

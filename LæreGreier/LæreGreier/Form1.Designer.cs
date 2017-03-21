@@ -141,7 +141,7 @@
             this.btnSjekk.TabIndex = 11;
             this.btnSjekk.Text = "Sjekk Svar";
             this.btnSjekk.UseVisualStyleBackColor = true;
-            this.btnSjekk.Click += new System.EventHandler(this.btnSjekk_Click_1);
+            this.btnSjekk.Click += new System.EventHandler(this.btnSjekk_Click);
             // 
             // btnNeste
             // 
@@ -205,7 +205,6 @@
             this.ferdigBilde.Size = new System.Drawing.Size(363, 256);
             this.ferdigBilde.TabIndex = 18;
             this.ferdigBilde.TabStop = false;
-            this.ferdigBilde.Click += new System.EventHandler(this.ferdigBilde_Click);
             // 
             // contextMenuStrip1
             // 

@@ -19,11 +19,26 @@ namespace LæreGreier
 
         Button avslutt = new System.Windows.Forms.Button(); 
 
-        private void ferdigboks_Load(object sender, EventArgs e)
+        private void avslutt_Click(object sender, EventArgs e)
+        {
+            //Application.Exit();
+            Hide();
+        }
+
+        private void ferdigboks_Shown(object sender, EventArgs e)
         {
             this.TopMost = true;
             FormBorderStyle = FormBorderStyle.None;
-            WindowState = FormWindowState.Maximized; 
+            WindowState = FormWindowState.Maximized;
+            avslutt.Location = new System.Drawing.Point(Width - 100, Height - 70);
+            avslutt.Name = "avslutt";
+            avslutt.Size = new System.Drawing.Size(100, 50);
+            avslutt.TabIndex = 18;
+            avslutt.Text = "Avslutt spill";
+            avslutt.UseVisualStyleBackColor = true;
+            avslutt.Click += new System.EventHandler(this.avslutt_Click);
+            Controls.Add(this.avslutt);
+            avslutt.BringToFront();
 
             if (Form1.poeng == 5)
             {
@@ -40,21 +55,6 @@ namespace LæreGreier
                 label1.Text = "Dette var dritt. Her har du en dårlig boi.";
                 pictureBox1.Image = Properties.Resources.dårligDatBoi;
             }
-
-            avslutt.Location = new System.Drawing.Point(Width - 100, Height - 70);
-            avslutt.Name = "avslutt";
-            avslutt.Size = new System.Drawing.Size(100, 50);
-            avslutt.TabIndex = 18;
-            avslutt.Text = "Avslutt spill";
-            avslutt.UseVisualStyleBackColor = true;
-            avslutt.Click += new System.EventHandler(this.avslutt_Click);
-            Controls.Add(this.avslutt);
-            avslutt.BringToFront(); 
-        }
-
-        private void avslutt_Click(object sender, EventArgs e)
-        {
-            Application.Exit(); 
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace LæreGreier
 {
@@ -17,7 +18,7 @@ namespace LæreGreier
             InitializeComponent();
 
             this.TopMost = true;
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
         }
 
         public static int poeng = 0;
@@ -25,6 +26,7 @@ namespace LæreGreier
         private Point MouseDownLocation;
         int startPosX = 0;
         int startPosY = 0;
+        List<Image> bildeListe = new List<Image>();
 
         private void BildePlassering()
         {
@@ -32,8 +34,6 @@ namespace LæreGreier
             i = RandomizeBilder(1, 16);
             if (i <= 4 && i >= 1)
             {
-                bilde1.ImageLocation = "Bock.jpg";
-                //bilde1.ImageLocation = "C:\Users\jacob\Documents\GitHub\FakkPetersPc\LæreGreier\Bilder\Velgebilder\Oppgave 1";
             }
         }
 
@@ -70,8 +70,23 @@ namespace LæreGreier
         private void btnSjekk_Click(object sender, EventArgs e)
         {
             form2.Show();
-            bilde2.ImageLocation  = "Bock.jpg";
-            MessageBox.Show(RandomizeBilder(1,16).ToString());
+            try
+            {
+                var files = Directory.GetFiles(@"C:\Users\jacob\Documents\GitHub\FakkPetersPc\LæreGreier\Resources\Bilder\Velgebilder","*.*",
+                    SearchOption.AllDirectories).Where(s => s.EndsWith(".jpg") || s.EndsWith (".png"));
+                
+                foreach (string filename in files)
+                {
+                    Bitmap B = new Bitmap(filename);
+                    bildeListe.Add(B);
+                }
+                bilde2.Image = bildeListe[0];
+            }
+            catch
+            {
+            }
+            MessageBox.Show(RandomizeBilder(0,4).ToString());
+            
         }
 
         private void Slipp(object sender, MouseEventArgs e)

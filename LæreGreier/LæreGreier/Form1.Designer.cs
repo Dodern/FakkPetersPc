@@ -207,9 +207,9 @@
             // 
             this.ferdigBilde.BackColor = System.Drawing.SystemColors.Control;
             this.ferdigBilde.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ferdigBilde.Location = new System.Drawing.Point(303, 103);
+            this.ferdigBilde.Location = new System.Drawing.Point(1230, 283);
             this.ferdigBilde.Name = "ferdigBilde";
-            this.ferdigBilde.Size = new System.Drawing.Size(363, 256);
+            this.ferdigBilde.Size = new System.Drawing.Size(226, 253);
             this.ferdigBilde.TabIndex = 18;
             this.ferdigBilde.TabStop = false;
             // 
@@ -232,7 +232,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1518, 873);
+            this.ClientSize = new System.Drawing.Size(1467, 873);
             this.Controls.Add(this.meme3);
             this.Controls.Add(this.lydSpiller);
             this.Controls.Add(this.ferdigBilde);

@@ -63,16 +63,6 @@ namespace LæreGreier.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Bock {
-            get {
-                object obj = ResourceManager.GetObject("Bock", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap braDatBoi {
             get {
                 object obj = ResourceManager.GetObject("braDatBoi", resourceCulture);
@@ -93,29 +83,9 @@ namespace LæreGreier.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Meksikanere {
-            get {
-                object obj = ResourceManager.GetObject("Meksikanere", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap okDatBoi {
             get {
                 object obj = ResourceManager.GetObject("okDatBoi", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Trump_mlg {
-            get {
-                object obj = ResourceManager.GetObject("Trump mlg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

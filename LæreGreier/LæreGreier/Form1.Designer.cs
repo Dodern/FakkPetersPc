@@ -69,7 +69,7 @@
             // meme3
             // 
             this.meme3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.meme3.Location = new System.Drawing.Point(30, 465);
+            this.meme3.Location = new System.Drawing.Point(30, 478);
             this.meme3.Name = "meme3";
             this.meme3.Size = new System.Drawing.Size(350, 182);
             this.meme3.TabIndex = 1;
@@ -78,7 +78,7 @@
             // meme2
             // 
             this.meme2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.meme2.Location = new System.Drawing.Point(30, 263);
+            this.meme2.Location = new System.Drawing.Point(30, 269);
             this.meme2.Name = "meme2";
             this.meme2.Size = new System.Drawing.Size(350, 182);
             this.meme2.TabIndex = 2;
@@ -94,9 +94,9 @@
             this.bilde1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bilde1.TabIndex = 7;
             this.bilde1.TabStop = false;
-            this.bilde1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseDown_1);
-            this.bilde1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseMove);
-            this.bilde1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseUp);
+            this.bilde1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TrykkePåBilde);
+            this.bilde1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Dra);
+            this.bilde1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Slipp);
             // 
             // bilde3
             // 
@@ -108,9 +108,9 @@
             this.bilde3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bilde3.TabIndex = 8;
             this.bilde3.TabStop = false;
-            this.bilde3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseDown_1);
-            this.bilde3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseMove);
-            this.bilde3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseUp);
+            this.bilde3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TrykkePåBilde);
+            this.bilde3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Dra);
+            this.bilde3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Slipp);
             // 
             // bilde4
             // 
@@ -122,9 +122,9 @@
             this.bilde4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bilde4.TabIndex = 9;
             this.bilde4.TabStop = false;
-            this.bilde4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseDown_1);
-            this.bilde4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseMove);
-            this.bilde4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseUp);
+            this.bilde4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TrykkePåBilde);
+            this.bilde4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Dra);
+            this.bilde4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Slipp);
             // 
             // bilde2
             // 
@@ -136,9 +136,9 @@
             this.bilde2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bilde2.TabIndex = 10;
             this.bilde2.TabStop = false;
-            this.bilde2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseDown_1);
-            this.bilde2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseMove);
-            this.bilde2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.bilde1_MouseUp);
+            this.bilde2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TrykkePåBilde);
+            this.bilde2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Dra);
+            this.bilde2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Slipp);
             // 
             // btnSjekk
             // 
@@ -198,9 +198,9 @@
             this.memeSjekk.BackColor = System.Drawing.Color.Transparent;
             this.memeSjekk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.memeSjekk.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.memeSjekk.Location = new System.Drawing.Point(30, 653);
+            this.memeSjekk.Location = new System.Drawing.Point(30, 686);
             this.memeSjekk.Name = "memeSjekk";
-            this.memeSjekk.Size = new System.Drawing.Size(435, 215);
+            this.memeSjekk.Size = new System.Drawing.Size(350, 182);
             this.memeSjekk.TabIndex = 17;
             // 
             // ferdigBilde
@@ -233,6 +233,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1518, 873);
+            this.Controls.Add(this.meme3);
             this.Controls.Add(this.lydSpiller);
             this.Controls.Add(this.ferdigBilde);
             this.Controls.Add(this.memeSjekk);
@@ -246,7 +247,6 @@
             this.Controls.Add(this.bilde3);
             this.Controls.Add(this.bilde1);
             this.Controls.Add(this.meme2);
-            this.Controls.Add(this.meme3);
             this.Controls.Add(this.meme1);
             this.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBox = false;

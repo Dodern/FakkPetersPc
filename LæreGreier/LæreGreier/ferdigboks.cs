@@ -17,11 +17,16 @@ namespace LæreGreier
             InitializeComponent();
         }
 
-        Button avslutt = new System.Windows.Forms.Button(); 
+        Button avslutt = new System.Windows.Forms.Button();
+        Button igjen = new System.Windows.Forms.Button(); 
 
         private void avslutt_Click(object sender, EventArgs e)
         {
-            //Application.Exit();
+            Application.Exit();
+        }
+
+        private void igjen_Click(object sender, EventArgs e)
+        {
             Hide();
         }
 
@@ -30,6 +35,8 @@ namespace LæreGreier
             this.TopMost = true;
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
+
+            #region Genererte knapper 
             avslutt.Location = new System.Drawing.Point(Width - 100, Height - 70);
             avslutt.Name = "avslutt";
             avslutt.Size = new System.Drawing.Size(100, 50);
@@ -39,6 +46,17 @@ namespace LæreGreier
             avslutt.Click += new System.EventHandler(this.avslutt_Click);
             Controls.Add(this.avslutt);
             avslutt.BringToFront();
+
+            igjen.Location = new System.Drawing.Point(Width - 100, Height - 170);
+            igjen.Name = "igjen";
+            igjen.Size = new System.Drawing.Size(100, 50);
+            igjen.TabIndex = 17;
+            igjen.Text = "Spill igjen";
+            igjen.UseVisualStyleBackColor = true;
+            igjen.Click += new System.EventHandler(this.igjen_Click);
+            Controls.Add(this.igjen);
+            igjen.BringToFront();
+            #endregion
 
             if (Form1.poeng == 5)
             {

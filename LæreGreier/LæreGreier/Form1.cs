@@ -35,7 +35,9 @@ namespace LæreGreier
 
         private void Randomize_Bilder()
         {
-            Finn_Bilder();
+            try
+            {
+                Finn_Bilder();
 
                 int i = 0;
                 int a = 0;
@@ -58,6 +60,9 @@ namespace LæreGreier
                     c = RandomTall(0, 4);
                 } while (c == i || c == a || c == b);
                 bilde4.Image = bildeListe[c];
+            }
+            catch
+            { }
         }
         
         private int RandomTall(int min,int max)

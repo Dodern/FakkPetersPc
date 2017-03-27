@@ -97,11 +97,7 @@ namespace LæreGreier
             {
                 ferdigBilde.Image = Properties.Resources.MadPepe;
             }
-<<<<<<< HEAD
             ferdigBilde.Visible = true;           
-=======
-            ferdigBilde.Visible = true;
->>>>>>> origin/master
         }
 
         private void Dra(object sender, MouseEventArgs e)
@@ -170,7 +166,6 @@ namespace LæreGreier
             p.Top = startPosY;
         }
 
-<<<<<<< HEAD
         private void btnNeste_Click(object sender, EventArgs e)
         {
             memeNummer++;
@@ -182,7 +177,5 @@ namespace LæreGreier
         {
             Randomize_Bilder();
         }
-=======
->>>>>>> origin/master
     }
 }

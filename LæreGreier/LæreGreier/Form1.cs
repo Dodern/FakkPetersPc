@@ -19,6 +19,8 @@ namespace LæreGreier
 
             this.TopMost = true;
             //this.WindowState = FormWindowState.Maximized;
+            ferdigBilde.Visible = false;
+            lydSpiller.Visible = false; 
         }
 
         public static int poeng = 0;
@@ -28,6 +30,8 @@ namespace LæreGreier
         int startPosY = 0;
         List<Image> bildeListe = new List<Image>();
         string path = "";
+        bool erRiktig = false;
+        int memeNummer = 1;
 
         private void BildePlassering()
         {
@@ -53,7 +57,7 @@ namespace LæreGreier
             } while (c == i || c == a || c == b);
             bilde4.Image = bildeListe[c];
         }
-
+        
         private int RandomizeBilder(int min,int max)
         {
             Random rnd = new Random();
@@ -71,6 +75,24 @@ namespace LæreGreier
                 startPosY = p.Top;
                 p.BringToFront();
             }
+        }
+
+        private void SjekkRiktig()
+        {
+            ferdigBilde.Location = new System.Drawing.Point(437, 146);
+            ferdigBilde.Size= new System.Drawing.Size(781, 460);
+
+            if (erRiktig)
+            {
+
+                poeng++;
+            }
+            else if (!erRiktig)
+            {
+
+            }
+            ferdigBilde.Visible = true;
+            memeNummer++;
         }
 
         private void Dra(object sender, MouseEventArgs e)

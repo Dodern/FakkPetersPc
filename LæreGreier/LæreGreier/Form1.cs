@@ -112,7 +112,9 @@ namespace LæreGreier
         }
 
         private void Finn_Bilder()
-        {         
+        {
+            bildeListe.Clear();
+            memeListe.Clear();      
             try
             {
                 string bildePath = @"Bilder\Velgebilder\Oppgave " + memeNummer;                             
@@ -135,9 +137,7 @@ namespace LæreGreier
                     bmp = new Bitmap(filename);
                     memeListe.Add(bmp);
                 }
-                meme1.Image = memeListe[0];
-                meme2.Image = memeListe[1];
-                meme3.Image = memeListe[2];
+                meme1.Image = memeListe[0];              
             }
             catch
             {

@@ -29,36 +29,38 @@ namespace LæreGreier
         int startPosX = 0;
         int startPosY = 0;
         List<Image> bildeListe = new List<Image>();
-        string path = "";
+        List<Image> memeListe = new List<Image>();
         bool erRiktig = false;
         int memeNummer = 1;
 
-        private void BildePlassering()
+        private void Randomize_Bilder()
         {
-            int i = 0;
-            int a = 0;
-            int b = 0;
-            int c = 0;
-            i = RandomizeBilder(0,4);
-            bilde1.Image = bildeListe[i];
-            do
-            {
-                a = RandomizeBilder(0, 4);
-            } while (a == i);
-            bilde2.Image = bildeListe[a];
-            do
-            {
-                b = RandomizeBilder(0, 4);
-            } while (b == i || b == a); 
-            bilde3.Image = bildeListe[b];
-            do
-            {
-                c = RandomizeBilder(0, 4);
-            } while (c == i || c == a || c == b);
-            bilde4.Image = bildeListe[c];
+            Finn_Bilder();
+
+                int i = 0;
+                int a = 0;
+                int b = 0;
+                int c = 0;
+                i = RandomTall(0, 4);
+                bilde1.Image = bildeListe[i];
+                do
+                {
+                    a = RandomTall(0, 4);
+                } while (a == i);
+                bilde2.Image = bildeListe[a];
+                do
+                {
+                    b = RandomTall(0, 4);
+                } while (b == i || b == a);
+                bilde3.Image = bildeListe[b];
+                do
+                {
+                    c = RandomTall(0, 4);
+                } while (c == i || c == a || c == b);
+                bilde4.Image = bildeListe[c];
         }
         
-        private int RandomizeBilder(int min,int max)
+        private int RandomTall(int min,int max)
         {
             Random rnd = new Random();
             return rnd.Next(min,max);
@@ -91,8 +93,7 @@ namespace LæreGreier
             {
 
             }
-            ferdigBilde.Visible = true;
-            memeNummer++;
+            ferdigBilde.Visible = true;           
         }
 
         private void Dra(object sender, MouseEventArgs e)
@@ -106,25 +107,47 @@ namespace LæreGreier
             }
         }
 
-        private void btnSjekk_Click(object sender, EventArgs e)
-        {
-            path = @"Bilder\Velgebilder\Oppgave 1";
-            //form2.Show();
+        private void Finn_Bilder()
+        {         
             try
             {
-                string[] files = Directory.GetFiles(path, "*.jpg", SearchOption.TopDirectoryOnly);
+                string bildePath = @"Bilder\Velgebilder\Oppgave " + memeNummer;                             
+                string[] bildeFiles = Directory.GetFiles(bildePath, "*.jpg", SearchOption.TopDirectoryOnly);
 
-                foreach (var filename in files)
+                foreach (var filename in bildeFiles)
                 {
                     Bitmap bmp = null;
-                        bmp = new Bitmap(filename);
-                        bildeListe.Add(bmp);                                    
-                 }
-                BildePlassering();
+                    bmp = new Bitmap(filename);
+                    bildeListe.Add(bmp);
+                }
+
+                string memePath = @"Bilder\Memes\Oppgave " + memeNummer;
+
+                string[] memeFiles = Directory.GetFiles(bildePath, "*.jpg", SearchOption.TopDirectoryOnly);
+
+                foreach (var filename in memeFiles)
+                {
+                    Bitmap bmp = null;
+                    bmp = new Bitmap(filename);
+                    memeListe.Add(bmp);
+                }
+                meme1.Image = memeListe[0];
+                meme2.Image = memeListe[1];
+                meme3.Image = memeListe[2];
             }
             catch
             {
             }
+        }
+        
+        private void Neste_Meme()
+        {
+            Randomize_Bilder();
+        }
+
+        private void btnSjekk_Click(object sender, EventArgs e)
+        {
+            SjekkRiktig();
         }
 
         private void Slipp(object sender, MouseEventArgs e)
@@ -137,6 +160,18 @@ namespace LæreGreier
             }
             p.Left = startPosX;
             p.Top = startPosY;
+        }
+
+        private void btnNeste_Click(object sender, EventArgs e)
+        {
+            memeNummer++;
+            Neste_Meme();
+            ferdigBilde.Visible = false;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Randomize_Bilder();
         }
     }
 }

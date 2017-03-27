@@ -63,6 +63,7 @@
             this.meme1.Location = new System.Drawing.Point(30, 60);
             this.meme1.Name = "meme1";
             this.meme1.Size = new System.Drawing.Size(350, 182);
+            this.meme1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.meme1.TabIndex = 0;
             this.meme1.TabStop = false;
             // 
@@ -72,6 +73,7 @@
             this.meme3.Location = new System.Drawing.Point(30, 478);
             this.meme3.Name = "meme3";
             this.meme3.Size = new System.Drawing.Size(350, 182);
+            this.meme3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.meme3.TabIndex = 1;
             this.meme3.TabStop = false;
             // 
@@ -81,6 +83,7 @@
             this.meme2.Location = new System.Drawing.Point(30, 269);
             this.meme2.Name = "meme2";
             this.meme2.Size = new System.Drawing.Size(350, 182);
+            this.meme2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.meme2.TabIndex = 2;
             this.meme2.TabStop = false;
             // 
@@ -154,12 +157,13 @@
             // btnNeste
             // 
             this.btnNeste.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNeste.Location = new System.Drawing.Point(886, 736);
+            this.btnNeste.Location = new System.Drawing.Point(875, 736);
             this.btnNeste.Name = "btnNeste";
             this.btnNeste.Size = new System.Drawing.Size(154, 53);
             this.btnNeste.TabIndex = 12;
             this.btnNeste.Text = "Neste";
             this.btnNeste.UseVisualStyleBackColor = true;
+            this.btnNeste.Click += new System.EventHandler(this.btnNeste_Click);
             // 
             // lbPoeng
             // 
@@ -210,6 +214,7 @@
             this.ferdigBilde.Location = new System.Drawing.Point(1230, 283);
             this.ferdigBilde.Name = "ferdigBilde";
             this.ferdigBilde.Size = new System.Drawing.Size(226, 253);
+            this.ferdigBilde.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ferdigBilde.TabIndex = 18;
             this.ferdigBilde.TabStop = false;
             // 
@@ -252,6 +257,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Meme Quiz";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.meme1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.meme3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.meme2)).EndInit();

@@ -27,14 +27,31 @@ namespace LæreGreier
         int startPosX = 0;
         int startPosY = 0;
         List<Image> bildeListe = new List<Image>();
+        string path = "";
 
         private void BildePlassering()
         {
             int i = 0;
-            i = RandomizeBilder(1, 16);
-            if (i <= 4 && i >= 1)
+            int a = 0;
+            int b = 0;
+            int c = 0;
+            i = RandomizeBilder(0,4);
+            bilde1.Image = bildeListe[i];
+            do
             {
-            }
+                a = RandomizeBilder(0, 4);
+            } while (a == i);
+            bilde2.Image = bildeListe[a];
+            do
+            {
+                b = RandomizeBilder(0, 4);
+            } while (b == i || b == a); 
+            bilde3.Image = bildeListe[b];
+            do
+            {
+                c = RandomizeBilder(0, 4);
+            } while (c == i || c == a || c == b);
+            bilde4.Image = bildeListe[c];
         }
 
         private int RandomizeBilder(int min,int max)
@@ -69,24 +86,23 @@ namespace LæreGreier
 
         private void btnSjekk_Click(object sender, EventArgs e)
         {
-            form2.Show();
+            path = @"Bilder\Velgebilder\Oppgave 1";
+            //form2.Show();
             try
             {
-                var files = Directory.GetFiles(@"C:\Users\jacob\Documents\GitHub\FakkPetersPc\LæreGreier\Resources\Bilder\Velgebilder","*.*",
-                    SearchOption.AllDirectories).Where(s => s.EndsWith(".jpg") || s.EndsWith (".png"));
-                
-                foreach (string filename in files)
+                string[] files = Directory.GetFiles(path, "*.jpg", SearchOption.TopDirectoryOnly);
+
+                foreach (var filename in files)
                 {
-                    Bitmap B = new Bitmap(filename);
-                    bildeListe.Add(B);
-                }
-                bilde2.Image = bildeListe[0];
+                    Bitmap bmp = null;
+                        bmp = new Bitmap(filename);
+                        bildeListe.Add(bmp);                                    
+                 }
+                BildePlassering();
             }
             catch
             {
             }
-            MessageBox.Show(RandomizeBilder(0,4).ToString());
-            
         }
 
         private void Slipp(object sender, MouseEventArgs e)

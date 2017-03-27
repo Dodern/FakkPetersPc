@@ -46,7 +46,6 @@
             this.bilde1 = new System.Windows.Forms.PictureBox();
             this.meme2 = new System.Windows.Forms.PictureBox();
             this.meme1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.lydSpiller)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.meme3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ferdigBilde)).BeginInit();
@@ -230,22 +229,11 @@
             this.meme1.TabIndex = 0;
             this.meme1.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(419, 129);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(57, 58);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1467, 873);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.meme3);
             this.Controls.Add(this.lydSpiller);
             this.Controls.Add(this.ferdigBilde);
@@ -297,7 +285,6 @@
         private System.Windows.Forms.PictureBox ferdigBilde;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private AxWMPLib.AxWindowsMediaPlayer lydSpiller;
-        private System.Windows.Forms.Button button1;
     }
 }
 

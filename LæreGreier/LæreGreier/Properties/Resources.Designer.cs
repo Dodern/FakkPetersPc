@@ -83,6 +83,26 @@ namespace LæreGreier.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HappyPepe {
+            get {
+                object obj = ResourceManager.GetObject("HappyPepe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MadPepe {
+            get {
+                object obj = ResourceManager.GetObject("MadPepe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap okDatBoi {
             get {
                 object obj = ResourceManager.GetObject("okDatBoi", resourceCulture);

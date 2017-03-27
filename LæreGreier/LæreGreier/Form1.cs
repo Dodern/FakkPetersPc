@@ -84,16 +84,24 @@ namespace LæreGreier
             ferdigBilde.Location = new System.Drawing.Point(437, 146);
             ferdigBilde.Size= new System.Drawing.Size(781, 460);
 
-            if (erRiktig)
+            if (memeNummer == 5)
             {
-
+                form2.Show();
+            }
+            else if (erRiktig)
+            {
+                ferdigBilde.Image = Properties.Resources.HappyPepe;
                 poeng++;
             }
             else if (!erRiktig)
             {
-
+                ferdigBilde.Image = Properties.Resources.MadPepe;
             }
+<<<<<<< HEAD
             ferdigBilde.Visible = true;           
+=======
+            ferdigBilde.Visible = true;
+>>>>>>> origin/master
         }
 
         private void Dra(object sender, MouseEventArgs e)
@@ -162,6 +170,7 @@ namespace LæreGreier
             p.Top = startPosY;
         }
 
+<<<<<<< HEAD
         private void btnNeste_Click(object sender, EventArgs e)
         {
             memeNummer++;
@@ -173,5 +182,7 @@ namespace LæreGreier
         {
             Randomize_Bilder();
         }
+=======
+>>>>>>> origin/master
     }
 }

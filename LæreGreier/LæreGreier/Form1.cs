@@ -91,11 +91,13 @@ namespace LæreGreier
             else if (erRiktig)
             {
                 ferdigBilde.Image = Properties.Resources.HappyPepe;
+                lydSpiller.URL = "positivLyd.mp3";
                 poeng++;
             }
             else if (!erRiktig)
             {
                 ferdigBilde.Image = Properties.Resources.MadPepe;
+                lydSpiller.URL = "negativLyd.mp3";
             }
             ferdigBilde.Visible = true;           
         }

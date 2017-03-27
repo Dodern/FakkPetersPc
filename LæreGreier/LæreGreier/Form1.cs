@@ -82,17 +82,20 @@ namespace LæreGreier
             ferdigBilde.Location = new System.Drawing.Point(437, 146);
             ferdigBilde.Size= new System.Drawing.Size(781, 460);
 
-            if (erRiktig)
+            if (memeNummer == 5)
             {
-
+                form2.Show();
+            }
+            else if (erRiktig)
+            {
+                ferdigBilde.Image = Properties.Resources.HappyPepe;
                 poeng++;
             }
             else if (!erRiktig)
             {
-
+                ferdigBilde.Image = Properties.Resources.MadPepe;
             }
             ferdigBilde.Visible = true;
-            memeNummer++;
         }
 
         private void Dra(object sender, MouseEventArgs e)
@@ -138,5 +141,6 @@ namespace LæreGreier
             p.Left = startPosX;
             p.Top = startPosY;
         }
+
     }
 }

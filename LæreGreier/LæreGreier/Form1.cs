@@ -161,6 +161,8 @@ namespace LæreGreier
                     bmp = new Bitmap(filename);
                     memeListe.Add(bmp);
                 }
+                meme1.Width = memeListe[0].Width;
+                meme1.Height = memeListe[0].Height;
                 meme1.Image = memeListe[0];              
             }
             catch

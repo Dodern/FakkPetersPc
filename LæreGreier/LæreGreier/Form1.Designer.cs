@@ -64,6 +64,13 @@
             this.btnSjekk.UseVisualStyleBackColor = true;
             this.btnSjekk.Click += new System.EventHandler(this.btnSjekk_Click);
             // 
+            // btnNeste
+            // 
+            this.btnNeste.Location = new System.Drawing.Point(0, 0);
+            this.btnNeste.Name = "btnNeste";
+            this.btnNeste.Size = new System.Drawing.Size(75, 23);
+            this.btnNeste.TabIndex = 20;
+            // 
             // lbPoeng
             // 
             this.lbPoeng.AutoSize = true;
@@ -101,7 +108,7 @@
             this.memeSjekk.BackColor = System.Drawing.Color.Transparent;
             this.memeSjekk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.memeSjekk.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.memeSjekk.Location = new System.Drawing.Point(188, 578);
+            this.memeSjekk.Location = new System.Drawing.Point(12, 578);
             this.memeSjekk.Name = "memeSjekk";
             this.memeSjekk.Size = new System.Drawing.Size(404, 290);
             this.memeSjekk.TabIndex = 17;

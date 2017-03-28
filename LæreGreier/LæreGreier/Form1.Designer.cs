@@ -108,9 +108,9 @@
             this.memeSjekk.BackColor = System.Drawing.Color.Transparent;
             this.memeSjekk.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.memeSjekk.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.memeSjekk.Location = new System.Drawing.Point(12, 578);
+            this.memeSjekk.Location = new System.Drawing.Point(12, 611);
             this.memeSjekk.Name = "memeSjekk";
-            this.memeSjekk.Size = new System.Drawing.Size(404, 290);
+            this.memeSjekk.Size = new System.Drawing.Size(400, 250);
             this.memeSjekk.TabIndex = 17;
             // 
             // contextMenuStrip1
@@ -201,7 +201,7 @@
             this.meme1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.meme1.Location = new System.Drawing.Point(12, 85);
             this.meme1.Name = "meme1";
-            this.meme1.Size = new System.Drawing.Size(762, 487);
+            this.meme1.Size = new System.Drawing.Size(750, 500);
             this.meme1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.meme1.TabIndex = 0;
             this.meme1.TabStop = false;

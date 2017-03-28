@@ -17,10 +17,11 @@ namespace LæreGreier
         {
             InitializeComponent();
 
-            this.TopMost = true;
+            //this.TopMost = true;
             //this.WindowState = FormWindowState.Maximized;
             ferdigBilde.Visible = false;
-            lydSpiller.Visible = false; 
+            lydSpiller.Visible = false;
+            neste.Visible = false;
         }
 
         public static int poeng = 0;
@@ -31,7 +32,7 @@ namespace LæreGreier
         List<Image> bildeListe = new List<Image>();
         List<Image> memeListe = new List<Image>();
         bool erRiktig = false;
-        int memeNummer = 1;
+        public static int memeNummer = 0;
         Button neste = new System.Windows.Forms.Button();
 
         private void Randomize_Bilder()
@@ -63,7 +64,7 @@ namespace LæreGreier
                 bilde4.Image = bildeListe[c];
             }
             catch
-            { }
+            {}
         }
         
         private int RandomTall(int min,int max)
@@ -90,10 +91,11 @@ namespace LæreGreier
             ferdigBilde.Location = new System.Drawing.Point(437, 146);
             ferdigBilde.Size= new System.Drawing.Size(781, 460);
 
+            Console.WriteLine(memeNummer);
+
             if (memeNummer >= 5)
             {
-                form2.Show();
-                //memeNummer = 0;
+                form2.Show();             
             }
             else if (erRiktig)
             {
@@ -103,9 +105,7 @@ namespace LæreGreier
                     lydSpiller.URL = "Lyd\\positivLyd.mp3";
                 }
                 catch
-                {
-
-                }               
+                {}               
                 poeng++;
                 lbPoeng.Text = "Poeng: " + poeng;
             }
@@ -117,9 +117,7 @@ namespace LæreGreier
                     lydSpiller.URL = "Lyd\\negativLyd.mp3";
                 }
                 catch
-                {
-
-                }
+                {}
             }
             ferdigBilde.Visible = true;           
         }
@@ -153,7 +151,7 @@ namespace LæreGreier
 
                 string memePath = @"Bilder\Memes\Oppgave " + memeNummer;
 
-                string[] memeFiles = Directory.GetFiles(bildePath, "*.jpg", SearchOption.TopDirectoryOnly);
+                string[] memeFiles = Directory.GetFiles(memePath, "*.jpg", SearchOption.TopDirectoryOnly);
 
                 foreach (var filename in memeFiles)
                 {
@@ -184,15 +182,6 @@ namespace LæreGreier
             SjekkRiktig();
             btnSjekk.Enabled = false;
             neste.Visible = true;       
-            neste.Location = new System.Drawing.Point(437+15, 146+400);
-            neste.Name = "neste";
-            neste.Size = new System.Drawing.Size(100, 50);
-            neste.TabIndex = 18;
-            neste.Text = "neste spill";
-            neste.UseVisualStyleBackColor = true;
-            neste.Click += new System.EventHandler(this.neste_Click);
-            Controls.Add(this.neste);
-            neste.BringToFront();
         }
 
         private void Slipp(object sender, MouseEventArgs e)
@@ -215,6 +204,15 @@ namespace LæreGreier
         private void Form1_Load(object sender, EventArgs e)
         {
             Randomize_Bilder();
+            neste.Location = new System.Drawing.Point(437 + 15, 146 + 400);
+            neste.Name = "Neste";
+            neste.Size = new System.Drawing.Size(100, 50);
+            neste.TabIndex = 18;
+            neste.Text = "Neste spill";
+            neste.UseVisualStyleBackColor = true;
+            neste.Click += new System.EventHandler(this.neste_Click);
+            Controls.Add(this.neste);
+            neste.BringToFront();
         }
     }
 }

@@ -32,6 +32,7 @@ namespace LæreGreier
         List<Image> memeListe = new List<Image>();
         bool erRiktig = false;
         int memeNummer = 1;
+        Button neste = new System.Windows.Forms.Button();
 
         private void Randomize_Bilder()
         {
@@ -89,10 +90,10 @@ namespace LæreGreier
             ferdigBilde.Location = new System.Drawing.Point(437, 146);
             ferdigBilde.Size= new System.Drawing.Size(781, 460);
 
-            if (memeNummer == 5)
+            if (memeNummer >= 5)
             {
                 form2.Show();
-                memeNummer = 0;
+                //memeNummer = 0;
             }
             else if (erRiktig)
             {
@@ -106,6 +107,7 @@ namespace LæreGreier
 
                 }               
                 poeng++;
+                lbPoeng.Text = "Poeng: " + poeng;
             }
             else if (!erRiktig)
             {
@@ -169,11 +171,26 @@ namespace LæreGreier
         private void Neste_Meme()
         {
             Randomize_Bilder();
+            memeNummer++;
+            ferdigBilde.Visible = false;
+            neste.Visible = false;
+            btnSjekk.Enabled = true;
         }
 
         private void btnSjekk_Click(object sender, EventArgs e)
         {
             SjekkRiktig();
+            btnSjekk.Enabled = false;
+            neste.Visible = true;       
+            neste.Location = new System.Drawing.Point(437+15, 146+400);
+            neste.Name = "neste";
+            neste.Size = new System.Drawing.Size(100, 50);
+            neste.TabIndex = 18;
+            neste.Text = "neste spill";
+            neste.UseVisualStyleBackColor = true;
+            neste.Click += new System.EventHandler(this.neste_Click);
+            Controls.Add(this.neste);
+            neste.BringToFront();
         }
 
         private void Slipp(object sender, MouseEventArgs e)
@@ -188,11 +205,9 @@ namespace LæreGreier
             p.Top = startPosY;
         }
 
-        private void btnNeste_Click(object sender, EventArgs e)
-        {
-            memeNummer++;
-            Neste_Meme();
-            ferdigBilde.Visible = false;
+        private void neste_Click(object sender, EventArgs e)
+        {           
+            Neste_Meme();           
         }
 
         private void Form1_Load(object sender, EventArgs e)

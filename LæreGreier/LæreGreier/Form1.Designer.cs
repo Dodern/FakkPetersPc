@@ -64,17 +64,6 @@
             this.btnSjekk.UseVisualStyleBackColor = true;
             this.btnSjekk.Click += new System.EventHandler(this.btnSjekk_Click);
             // 
-            // btnNeste
-            // 
-            this.btnNeste.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNeste.Location = new System.Drawing.Point(1177, 720);
-            this.btnNeste.Name = "btnNeste";
-            this.btnNeste.Size = new System.Drawing.Size(154, 53);
-            this.btnNeste.TabIndex = 12;
-            this.btnNeste.Text = "Neste";
-            this.btnNeste.UseVisualStyleBackColor = true;
-            this.btnNeste.Click += new System.EventHandler(this.btnNeste_Click);
-            // 
             // lbPoeng
             // 
             this.lbPoeng.AutoSize = true;

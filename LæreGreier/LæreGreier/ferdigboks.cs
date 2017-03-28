@@ -37,7 +37,7 @@ namespace LæreGreier
             WindowState = FormWindowState.Maximized;
 
             #region Genererte knapper 
-            avslutt.Location = new System.Drawing.Point(Width - 100, Height - 70);
+            avslutt.Location = new System.Drawing.Point(Width - 115, Height - 65);
             avslutt.Name = "avslutt";
             avslutt.Size = new System.Drawing.Size(100, 50);
             avslutt.TabIndex = 18;
@@ -47,7 +47,7 @@ namespace LæreGreier
             Controls.Add(this.avslutt);
             avslutt.BringToFront();
 
-            igjen.Location = new System.Drawing.Point(Width - 100, Height - 170);
+            igjen.Location = new System.Drawing.Point(Width - 115, Height - 125);
             igjen.Name = "igjen";
             igjen.Size = new System.Drawing.Size(100, 50);
             igjen.TabIndex = 17;
@@ -60,17 +60,14 @@ namespace LæreGreier
 
             if (Form1.poeng == 5)
             {
-                label1.Text = "Gratulerer! Du fikk full score. Kos deg med en bra boi.";
                 pictureBox1.Image = Properties.Resources.braDatBoi;
             }
             else if (Form1.poeng == 3 || Form1.poeng == 4)
             {
-                label1.Text = "Dette var ok. Ha deg en middels boi.";
                 pictureBox1.Image = Properties.Resources.okDatBoi;
             }
             else if (Form1.poeng <= 2)
             {
-                label1.Text = "Dette var dritt. Her har du en dårlig boi.";
                 pictureBox1.Image = Properties.Resources.dårligDatBoi;
             }
         }

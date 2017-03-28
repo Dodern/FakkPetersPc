@@ -92,17 +92,32 @@ namespace LæreGreier
             if (memeNummer == 5)
             {
                 form2.Show();
+                memeNummer = 0;
             }
             else if (erRiktig)
             {
                 ferdigBilde.Image = Properties.Resources.HappyPepe;
-                lydSpiller.URL = "positivLyd.mp3";
+                try
+                {
+                    lydSpiller.URL = "Lyd\\positivLyd.mp3";
+                }
+                catch
+                {
+
+                }               
                 poeng++;
             }
             else if (!erRiktig)
             {
                 ferdigBilde.Image = Properties.Resources.MadPepe;
-                lydSpiller.URL = "negativLyd.mp3";
+                try
+                {
+                    lydSpiller.URL = "Lyd\\negativLyd.mp3";
+                }
+                catch
+                {
+
+                }
             }
             ferdigBilde.Visible = true;           
         }

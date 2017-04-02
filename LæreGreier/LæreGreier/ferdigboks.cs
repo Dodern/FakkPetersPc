@@ -28,7 +28,6 @@ namespace LæreGreier
         private void igjen_Click(object sender, EventArgs e)
         {
             Hide();
-            Form1.memeNummer = 1;
         }
 
         private void ferdigboks_Shown(object sender, EventArgs e)
@@ -59,15 +58,17 @@ namespace LæreGreier
             igjen.BringToFront();
             #endregion
 
-            if (Form1.poeng == 5)
+            Console.WriteLine(Form1.endeligPoeng);
+
+            if (Form1.endeligPoeng == 5)
             {
                 pictureBox1.Image = Properties.Resources.braDatBoi;
             }
-            else if (Form1.poeng == 3 || Form1.poeng == 4)
+            else if (Form1.endeligPoeng == 3 || Form1.endeligPoeng == 4)
             {
                 pictureBox1.Image = Properties.Resources.okDatBoi;
             }
-            else if (Form1.poeng <= 2)
+            else if (Form1.endeligPoeng <= 2)
             {
                 pictureBox1.Image = Properties.Resources.dårligDatBoi;
             }

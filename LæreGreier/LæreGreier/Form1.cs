@@ -18,13 +18,14 @@ namespace LæreGreier
             InitializeComponent();
 
             //this.TopMost = true;
-            //this.WindowState = FormWindowState.Maximized;
+            this.WindowState = FormWindowState.Maximized;
             ferdigBilde.Visible = false;
             lydSpiller.Visible = false;
             neste.Visible = false;
         }
 
-        public static int poeng = 0;
+        public static int endeligPoeng = 0;
+        int poeng = 0;
         ferdigboks form2 = new ferdigboks();
         private Point MouseDownLocation;
         int startPosX = 0;
@@ -82,7 +83,6 @@ namespace LæreGreier
                 MouseDownLocation = e.Location;
                 startPosX = p.Left;
                 startPosY = p.Top;
-                p.BringToFront();
             }
         }
 
@@ -91,7 +91,14 @@ namespace LæreGreier
             ferdigBilde.Location = new System.Drawing.Point(437, 146);
             ferdigBilde.Size= new System.Drawing.Size(781, 460);
 
-            Console.WriteLine(memeNummer);
+            if (memeSjekk.BackgroundImage == bildeListe[3])
+            {
+                erRiktig = true;
+            }
+            else
+            {
+                erRiktig = false;
+            }
 
             if (memeNummer >= 6)
             {
@@ -107,7 +114,6 @@ namespace LæreGreier
                 catch
                 {}               
                 poeng++;
-                lbPoeng.Text = "Poeng: " + poeng;
             }
             else if (!erRiktig)
             {
@@ -119,7 +125,7 @@ namespace LæreGreier
                 catch
                 {}
             }
-            ferdigBilde.Visible = true;           
+            ferdigBilde.Visible = true;
         }
 
         private void Dra(object sender, MouseEventArgs e)
@@ -128,8 +134,8 @@ namespace LæreGreier
 
             if (e.Button == System.Windows.Forms.MouseButtons.Left)
             {
-                p.Left = e.X + p.Left - MouseDownLocation.X;
-                p.Top = e.Y + p.Top - MouseDownLocation.Y;
+                p.Left = e.X + p.Left;
+                p.Top = e.Y + p.Top;
             }
         }
 
@@ -168,14 +174,14 @@ namespace LæreGreier
             }
         }
         
-        private void Neste_Meme()
-        {
+        public void Neste_Meme()
+        {            
             Randomize_Bilder();
-            memeNummer++;
             ferdigBilde.Visible = false;
             neste.Visible = false;
             btnSjekk.Enabled = true;
             memeSjekk.BackgroundImage = null;
+            lbPoeng.Text = "Poeng: " + poeng;
         }
 
         private void btnSjekk_Click(object sender, EventArgs e)
@@ -198,16 +204,24 @@ namespace LæreGreier
         }
 
         private void neste_Click(object sender, EventArgs e)
-        {           
-            Neste_Meme();
-            if (memeNummer >= 7)
+        {
+            memeNummer++;
+            if (memeNummer >= 6)
             {
-                form2.Show();
-                memeNummer = 0;
+                endeligPoeng = poeng;
                 poeng = 0;
-                Neste_Meme();
+                form2.Show();
                 neste.Text = "Neste meme";
+                memeNummer = 1;
+                Randomize_Bilder();
+                lbPoeng.Text = "Poeng: " + poeng;
+                Neste_Meme();
+
             }
+            else
+            {
+                Neste_Meme();
+            }           
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -220,9 +234,9 @@ namespace LæreGreier
             neste.Text = "Neste meme";
             neste.UseVisualStyleBackColor = true;
             neste.Click += new System.EventHandler(this.neste_Click);
-            Controls.Add(this.neste);
-            neste.BringToFront();
+            Controls.Add(this.neste);          
             Neste_Meme();
+            neste.BringToFront();
         }
     }
 }

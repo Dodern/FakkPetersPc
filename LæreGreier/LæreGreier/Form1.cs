@@ -207,7 +207,7 @@ namespace LæreGreier
         }
 
         /* Event som skjer når du slipper den valgte bildet du har dratt rundt. Hvis musen er over memeSjekk når du slipper,
-         så vil den sjekke bildet, hvis den er noe annet sted så vil bildet gå tilbake dit det startet*/
+         så vil memesjekk bli det bildet, hvis den er noe annet sted så vil bildet gå tilbake dit det startet*/
         private void Slipp(object sender, MouseEventArgs e)
         {
             PictureBox p = sender as PictureBox;

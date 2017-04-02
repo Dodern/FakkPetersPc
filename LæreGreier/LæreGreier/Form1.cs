@@ -32,7 +32,7 @@ namespace LæreGreier
         List<Image> bildeListe = new List<Image>();
         List<Image> memeListe = new List<Image>();
         bool erRiktig = false;
-        public static int memeNummer = 0;
+        public static int memeNummer = 1;
         Button neste = new System.Windows.Forms.Button();
 
         private void Randomize_Bilder()
@@ -93,9 +93,9 @@ namespace LæreGreier
 
             Console.WriteLine(memeNummer);
 
-            if (memeNummer >= 5)
+            if (memeNummer >= 6)
             {
-                form2.Show();             
+                neste.Text = "Fullfør spillet";            
             }
             else if (erRiktig)
             {
@@ -175,6 +175,7 @@ namespace LæreGreier
             ferdigBilde.Visible = false;
             neste.Visible = false;
             btnSjekk.Enabled = true;
+            memeSjekk.BackgroundImage = null;
         }
 
         private void btnSjekk_Click(object sender, EventArgs e)
@@ -198,7 +199,15 @@ namespace LæreGreier
 
         private void neste_Click(object sender, EventArgs e)
         {           
-            Neste_Meme();           
+            Neste_Meme();
+            if (memeNummer >= 7)
+            {
+                form2.Show();
+                memeNummer = 0;
+                poeng = 0;
+                Neste_Meme();
+                neste.Text = "Neste meme";
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -208,11 +217,12 @@ namespace LæreGreier
             neste.Name = "Neste";
             neste.Size = new System.Drawing.Size(100, 50);
             neste.TabIndex = 18;
-            neste.Text = "Neste spill";
+            neste.Text = "Neste meme";
             neste.UseVisualStyleBackColor = true;
             neste.Click += new System.EventHandler(this.neste_Click);
             Controls.Add(this.neste);
             neste.BringToFront();
+            Neste_Meme();
         }
     }
 }

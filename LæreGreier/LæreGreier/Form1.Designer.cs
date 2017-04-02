@@ -44,6 +44,7 @@
             this.bilde3 = new System.Windows.Forms.PictureBox();
             this.bilde1 = new System.Windows.Forms.PictureBox();
             this.meme1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.lydSpiller)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ferdigBilde)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bilde2)).BeginInit();
@@ -211,6 +212,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1467, 873);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lydSpiller);
             this.Controls.Add(this.ferdigBilde);
             this.Controls.Add(this.memeSjekk);
@@ -257,6 +259,7 @@
         private System.Windows.Forms.PictureBox ferdigBilde;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private AxWMPLib.AxWindowsMediaPlayer lydSpiller;
+        private System.Windows.Forms.Button button1;
     }
 }
 

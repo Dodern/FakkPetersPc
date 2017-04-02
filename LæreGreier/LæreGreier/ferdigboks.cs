@@ -28,7 +28,7 @@ namespace LæreGreier
         private void igjen_Click(object sender, EventArgs e)
         {
             Hide();
-            Form1.memeNummer = 0;
+            Form1.memeNummer = 1;
         }
 
         private void ferdigboks_Shown(object sender, EventArgs e)

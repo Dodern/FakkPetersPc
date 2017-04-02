@@ -18,13 +18,17 @@ namespace LæreGreier
         }
 
         Button avslutt = new System.Windows.Forms.Button();
-        Button igjen = new System.Windows.Forms.Button(); 
+        Button igjen = new System.Windows.Forms.Button();
 
+        /*Eventen som vil skje når du klikker på den generete knappen avslutt. Blir brukt hvis 
+        brukeren skal avslutte applikasjonen*/
         private void avslutt_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /*Eventen som vil skje når du klikker på den generete knappen igjen. Blir brukt hvis 
+        brukeren skal ta et nytt spill*/
         private void igjen_Click(object sender, EventArgs e)
         {
             Hide();
@@ -36,6 +40,7 @@ namespace LæreGreier
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
 
+            //Generer to knapper som kommer oppå formen ferdigboks når den blir vist
             #region Genererte knapper 
             avslutt.Location = new System.Drawing.Point(Width - 115, Height - 65);
             avslutt.Name = "avslutt";
@@ -58,8 +63,8 @@ namespace LæreGreier
             igjen.BringToFront();
             #endregion
 
-            Console.WriteLine(Form1.endeligPoeng);
-
+            /*Når formen ferdigboks blir vist så vil den sjekke ved hjelp av int'en 
+            endeligPoeng hvordan brukeren skal bli belønnet*/
             if (Form1.endeligPoeng == 5)
             {
                 pictureBox1.Image = Properties.Resources.braDatBoi;

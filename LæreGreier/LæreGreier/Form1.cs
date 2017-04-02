@@ -17,7 +17,7 @@ namespace LæreGreier
         {
             InitializeComponent();
 
-            //this.TopMost = true;
+            this.TopMost = true;
             this.WindowState = FormWindowState.Maximized;
             ferdigBilde.Visible = false;
             lydSpiller.Visible = false;
@@ -36,6 +36,10 @@ namespace LæreGreier
         public static int memeNummer = 1;
         Button neste = new System.Windows.Forms.Button();
 
+        /* Metode som velger en tilfeldig plassering på bildene. Bildene blir lagt til i en liste og deretter
+         blir den listen brukt for å lage plasseringen tilfeldig. Bildene blir hentet fra en mappe som inneholder
+         bildene til den relevante memen. Gir et tilfeldig tall for hvert bile og gir bildene en plass
+         i forhold til det tallet*/
         private void Randomize_Bilder()
         {
             try
@@ -68,12 +72,15 @@ namespace LæreGreier
             {}
         }
         
+
         private int RandomTall(int min,int max)
         {
             Random rnd = new Random();
             return rnd.Next(min,max);
         }
 
+        /* Event som skjer når man trykker på et av de fire alternativene, lagrer posisjonen til bildet 
+        slik at det kan bli brukt senere*/
         private void TrykkePåBilde(object sender, MouseEventArgs e)
         {
             PictureBox p = sender as PictureBox;
@@ -86,6 +93,8 @@ namespace LæreGreier
             }
         }
 
+        /* Metode som sjekker om brukeren har valgt riktig bilde. Sjekker om det bildet som brukeren dro inn på memeSjekk panelet
+         er det riktige bildet, vil spille av lyder og vise et bilde basert på om svaret er riktig eller galt*/
         private void SjekkRiktig()
         {
             ferdigBilde.Location = new System.Drawing.Point(437, 146);
@@ -128,6 +137,9 @@ namespace LæreGreier
             ferdigBilde.Visible = true;
         }
 
+        /* Event som skjer når du klikker på en av de fire alternativene og drar den rundt. 
+         Posisjonen til det venstre hjørnet i bildet blir det samme som der musen er pluss lengden
+         og høyden på det valgte bildet. Gjør så bildet synlig kan bli dratt rundt*/
         private void Dra(object sender, MouseEventArgs e)
         {
             PictureBox p = sender as PictureBox;
@@ -139,6 +151,8 @@ namespace LæreGreier
             }
         }
 
+        /* Metode som skal finne bilder. Finner bildene fra en mappe i forhold til memeNummer. memeNummer blir brukt for
+         å finne den riktige mappen og henter bildene fra den*/
         private void Finn_Bilder()
         {
             bildeListe.Clear();
@@ -173,7 +187,8 @@ namespace LæreGreier
             {
             }
         }
-        
+
+        //Metode som blir brukt for å oppdatere poeng og finne nye bilder etter du har klikket på neste knappen
         public void Neste_Meme()
         {            
             Randomize_Bilder();
@@ -191,6 +206,8 @@ namespace LæreGreier
             neste.Visible = true;       
         }
 
+        /* Event som skjer når du slipper den valgte bildet du har dratt rundt. Hvis musen er over memeSjekk når du slipper,
+         så vil den sjekke bildet, hvis den er noe annet sted så vil bildet gå tilbake dit det startet*/
         private void Slipp(object sender, MouseEventArgs e)
         {
             PictureBox p = sender as PictureBox;
@@ -203,6 +220,7 @@ namespace LæreGreier
             p.Top = startPosY;
         }
 
+        //Den genererte knappen som kommer etter du har sjekket bildet via btnSjekk
         private void neste_Click(object sender, EventArgs e)
         {
             memeNummer++;
@@ -227,6 +245,7 @@ namespace LæreGreier
         private void Form1_Load(object sender, EventArgs e)
         {
             Randomize_Bilder();
+            //Generer en knapp som kommer etter du har sjekket svar via btnSjekk
             neste.Location = new System.Drawing.Point(437 + 15, 146 + 400);
             neste.Name = "Neste";
             neste.Size = new System.Drawing.Size(100, 50);

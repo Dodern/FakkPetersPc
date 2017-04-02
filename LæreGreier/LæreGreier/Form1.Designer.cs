@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnSjekk = new System.Windows.Forms.Button();
-            this.btnNeste = new System.Windows.Forms.Button();
             this.lbPoeng = new System.Windows.Forms.Label();
             this.lbRegler = new System.Windows.Forms.Label();
             this.lbTitle = new System.Windows.Forms.Label();
@@ -44,7 +43,6 @@
             this.bilde3 = new System.Windows.Forms.PictureBox();
             this.bilde1 = new System.Windows.Forms.PictureBox();
             this.meme1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.lydSpiller)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ferdigBilde)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bilde2)).BeginInit();
@@ -64,13 +62,6 @@
             this.btnSjekk.Text = "Sjekk Svar";
             this.btnSjekk.UseVisualStyleBackColor = true;
             this.btnSjekk.Click += new System.EventHandler(this.btnSjekk_Click);
-            // 
-            // btnNeste
-            // 
-            this.btnNeste.Location = new System.Drawing.Point(0, 0);
-            this.btnNeste.Name = "btnNeste";
-            this.btnNeste.Size = new System.Drawing.Size(75, 23);
-            this.btnNeste.TabIndex = 20;
             // 
             // lbPoeng
             // 
@@ -207,26 +198,17 @@
             this.meme1.TabIndex = 0;
             this.meme1.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1467, 873);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lydSpiller);
             this.Controls.Add(this.ferdigBilde);
             this.Controls.Add(this.memeSjekk);
             this.Controls.Add(this.lbTitle);
             this.Controls.Add(this.lbRegler);
             this.Controls.Add(this.lbPoeng);
-            this.Controls.Add(this.btnNeste);
             this.Controls.Add(this.btnSjekk);
             this.Controls.Add(this.bilde2);
             this.Controls.Add(this.bilde4);
@@ -258,7 +240,6 @@
         private System.Windows.Forms.PictureBox bilde4;
         private System.Windows.Forms.PictureBox bilde2;
         private System.Windows.Forms.Button btnSjekk;
-        private System.Windows.Forms.Button btnNeste;
         private System.Windows.Forms.Label lbPoeng;
         private System.Windows.Forms.Label lbRegler;
         private System.Windows.Forms.Label lbTitle;
@@ -266,7 +247,6 @@
         private System.Windows.Forms.PictureBox ferdigBilde;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private AxWMPLib.AxWindowsMediaPlayer lydSpiller;
-        private System.Windows.Forms.Button button1;
     }
 }
 
